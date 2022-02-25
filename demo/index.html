@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <ui-alert status="success" closable>
+    hello there
+  </ui-alert>
+
+  <script type="module">
+    import '../dist/src/alert/register.js';
+
+    const message = document.querySelector('ui-alert');
+    message.addEventListener('closeChange', () => alert('close!'));
+  </script>
+</body>
+</html>
